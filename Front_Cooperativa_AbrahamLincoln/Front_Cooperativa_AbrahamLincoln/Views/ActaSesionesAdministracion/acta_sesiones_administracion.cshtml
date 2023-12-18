@@ -1,0 +1,533 @@
+﻿@model IEnumerable<Front_Cooperativa_AbrahamLincoln.Entidades.IActas_Sesiones_Administracion>
+@{
+    ViewData["Title"] = "acta_sesiones_administracion";
+}
+
+@* <!DOCTYPE html> *@
+<html>
+<head>
+    <title>Tu Título</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+
+    <!-- Enlaza tu archivo CSS -->
+    @*     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/normas.css" />
+    <link rel="stylesheet" href="~/css/login.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/acceso.css" /> *@
+    @* <link rel="stylesheet" href="~/css/bootstrap.min.css" /> *@
+    <!-- Otros elementos del encabezado -->
+</head>
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="#OrganizaciónSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Organización</a>
+                        <ul class="collapse list-unstyled" id="OrganizaciónSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/EstructuraGobierno/estructuraGobierno">Estructuras de Gobirerno</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/Directivos/directivo">Directivos</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#ÓrganosdeGestiónSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Órganos de Gestión</a>
+                        <ul class="collapse list-unstyled" id="ÓrganosdeGestiónSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/Cooperativa/cooperativa">Cooperativa</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/Colegio/colegio">Colegio</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#AsambleaGeneralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Asamblea General</a>
+                        <ul class="collapse list-unstyled" id="AsambleaGeneralSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/Asamblea/asamblea">Asambleas</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#ConsejoAdministracionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Consejo Administracion</a>
+                        <ul class="collapse list-unstyled" id="ConsejoAdministracionSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/ActaSesionesAdministracion/acta_sesiones_administracion">Actas de Sesiones</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/InformacionSocioAdministracion/infoSocioAdministracion">Informaciones al Socio</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/ReportesFinancieros/reportesFinancieros">Reportes Financieros</a>
+                            </li>
+                            <li>
+                                <a href="#ProyectoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Proyecto</a>
+                                <ul class="collapse list-unstyled" id="ProyectoSubmenu">
+                                    <li>
+                                        <a href="https://localhost:7192/InfraestructuraProyecto/infraestructraProyecto">Infraestructura</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://localhost:7192/OperativosProyectos/operativosProyectos">Operaciones</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://localhost:7192/PedagogicosProyectos/pedagogicosProyectos">Pedagogicos</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/ContratosAdquisiciones/contratosAdquisiciones">Contratos y Adquisiciones</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#ConsejodeVigilanciaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Consejo de Vigilancia</a>
+                        <ul class="collapse list-unstyled" id="ConsejodeVigilanciaSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/ActaSesionesVigilancia/actaSesionesVigilancia">Actas de Sesiones</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/InformacionSocioVigilancia/informacionSocioVigilancia">Información al Socio</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#ComitéElectoralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comité Electoral</a>
+                        <ul class="collapse list-unstyled" id="ComitéElectoralSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/ProcesosElectorales/procesosElectorales">Procesos Electorales</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/InformacionSocioComiteElectoral/informacionSocioComiteElectoral">Información al Socio</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#ComitéEducCoopSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comité Educ. Coop.</a>
+                        <ul class="collapse list-unstyled" id="ComitéEducCoopSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/InformacionGeneral/informacionGeneral">Informacón General</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/Conversatorios/conversatorio">Conversatorios</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/TalleresInduccion/talleresInduccion">Talleres de Inducción</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#GerenciaGeneralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gerencia General</a>
+                        <ul class="collapse list-unstyled" id="GerenciaGeneralSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/InformacionSocioGerencia/informacionSocioGerencia">Información al Socio</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/DocumentoProceso/documentoProceso">Procesos</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#ComitésSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comités</a>
+                        <ul class="collapse list-unstyled" id="ComitésSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/Apoyo/apoyo">Apoyo</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/Especiales/especiales">Especiales</a>
+                            </li>
+                        </ul>
+                    </li>
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://abrahamlincoln.edu.pe/language/en/home-2/">Colegio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Historia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Proveedores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="normaslegales.html">Normas Legales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Seguro Estudiantil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Procesos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            @* <form action="/Acta_sesiones_administracion/acta_sesiones_administracion">
+                <p>Acta Sesiones</p>
+                <p>
+                    <select name="id" asp-items="ViewBag.ActaSesionesAdmin">
+                        <option>Seleccionar</option>
+                    </select>
+                    <input type="submit" value="Enviar" />
+                </p>
+            </form> *@
+            <select id="comboBoxID"></select>
+
+            <section class="center-pdf">
+                <div class="redondeo-tabla">
+
+                    <table id="documentosTabla">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre del Documento</th>
+                                <th>Acción</th>
+@*                                 <div id="pdfViewer"></div>
+ *@
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se llenarán dinámicamente los datos -->
+                        </tbody>
+                    </table>
+
+                        @* @{
+                            var reversedModel = Model.Reverse();
+                        } *@
+
+                      @*   @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item._Nombre</td>
+                                <td class="centrar-contenido">
+                                    <a href="data:application/pdf;base64,@Convert.ToBase64String(item._Documento)" download="@item._Nombre">
+                                        <!-- Puedes utilizar un icono como una flecha hacia abajo o cualquier otro icono representativo -->
+                                        <img src="~/images/iconopdf.png" alt="Icono PDF" width="30" height="30" style="vertical-align: middle;" />
+                                    </a>
+                                </td>
+                            </tr>
+                        } *@
+
+                    </table>
+                </div>
+            </section>
+
+        
+        </div>
+    </div>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+
+    <script>
+       // Supongamos que tienes un ID específico
+        var id = 1; // Reemplaza esto con el ID que necesitas
+
+        $.ajax({
+            url: "https://localhost:7167/api/ListarComponentes/anios_actas",
+            type: "GET",
+            success: function (actasSesiones) {
+                console.log('jjjjjj', actasSesiones);
+                console.log('jjjjjj', actasSesiones);
+                var comboBox = document.getElementById("comboBoxID");
+
+                // Iterar sobre los datos y agregar opciones al ComboBox
+                actasSesiones.forEach(function (item) {
+                    var option = document.createElement("option");
+                    option.value = item.id; // Establecer el valor del option con el ID
+
+                    // option.value = item.anios; // Establecer el valor del option con el año
+                    option.text = item.anios; // Establecer el texto visible del option con el año
+                    comboBox.appendChild(option); // Agregar la opción al ComboBox
+                });
+            },
+            error: function (xhr, status, error) {
+                console.error("Error en la segunda solicitud:", status, error);
+            }
+        });
+
+
+       // Realizar la solicitud AJAX
+        // $.ajax({
+        //     url: "https://localhost:7167/api/ListarComponentes/actas_sesiones_administracion/" + id,
+        //     type: "GET",
+        //     success: function (data) {
+             
+        //         const tablaBody = $('#documentosTabla tbody');
+
+        //         // Limpiar la tabla antes de agregar nuevos datos
+        //         tablaBody.empty();
+
+        //         // Recorrer los datos obtenidos y construir filas para la tabla
+        //         data.forEach(function (documento) {
+        //             const newRow = $('<tr>');
+        //             const idCell = $('<td>').text(documento.id);
+        //             const nombreCell = $('<td>').text(documento._Nombre);
+        //             const actionCell = $('<td>');
+
+        //             // Crear un enlace de descarga para el PDF correspondiente
+        //             const descargarEnlace = $('<a>')
+        //                 .text('Descargar PDF')
+        //                 .attr('href', `data:application/pdf;base64, ${documento._Documento}`)
+        //                 .attr('download', `${documento._Nombre}.pdf`);
+
+        //             // Agregar el enlace a la celda 'Acción'
+        //             actionCell.append(descargarEnlace);
+
+        //             // Agregar celdas a la fila
+        //             newRow.append(idCell, nombreCell, actionCell);
+
+        //             // Agregar la fila a la tabla
+        //             tablaBody.append(newRow);
+        //         });
+        //     },
+        //     error: function (xhr, status, error) {
+        //         console.error("Error en la solicitud:", status, error);
+        //     }
+        // });
+
+
+        // $('#comboBoxID').on('change', function () {
+        //     var selectedId = $(this).val(); // Obtener el value seleccionado en el ComboBox
+        //     console.log('ID seleccionado:', selectedId);
+
+        //     // Realizar la siguiente solicitud AJAX utilizando el ID seleccionado
+        //     $.ajax({
+        //         url: "https://localhost:7167/api/ListarComponentes/actas_sesiones_administracion/" + selectedId,
+        //         type: "GET",
+        //         success: function (data) {
+        //             const tablaBody = $('#documentosTabla tbody');
+
+        //             // Limpiar la tabla antes de agregar nuevos datos
+        //             tablaBody.empty();
+
+        //             // Recorrer los datos obtenidos y construir filas para la tabla
+        //             data.forEach(function (documento) {
+        //                 const newRow = $('<tr>');
+        //                 const idCell = $('<td>').text(documento.id);
+        //                 const nombreCell = $('<td>').text(documento._Nombre);
+        //                 const actionCell = $('<td>');
+
+        //                 // Crear un enlace de descarga para el PDF correspondiente
+        //                 const descargarEnlace = $('<a>')
+        //                     .text('Descargar PDF')
+        //                     .attr('href', `data:application/pdf;base64, ${documento._Documento}`)
+        //                     .attr('download', `${documento._Nombre}.pdf`);
+
+        //                 // Agregar el enlace a la celda 'Acción'
+        //                 actionCell.append(descargarEnlace);
+
+        //                 // Agregar celdas a la fila
+        //                 newRow.append(idCell, nombreCell, actionCell);
+
+        //                 // Agregar la fila a la tabla
+        //                 tablaBody.append(newRow);
+        //             });
+        //         },
+        //         error: function (xhr, status, error) {
+        //             console.error("Error en la solicitud:", status, error);
+        //         }
+        //     });
+        // });
+
+        $(document).ready(function () {
+            // Realizar la solicitud AJAX inicial con ID 1
+            $.ajax({
+                url: "https://localhost:7167/api/ListarComponentes/actas_sesiones_administracion/1",
+                type: "GET",
+                success: function (data) {
+                    // Lógica para manejar la respuesta inicial con ID 1
+                    // Esta parte puede ser similar a la lógica que se maneja en el evento 'change' del ComboBox
+                    const tablaBody = $('#documentosTabla tbody');
+
+                    // Limpiar la tabla antes de agregar nuevos datos
+                    tablaBody.empty();
+
+                    // Recorrer los datos obtenidos y construir filas para la tabla
+                    data.forEach(function (documento) {
+                        const newRow = $('<tr>');
+                        const idCell = $('<td>').text(documento.id);
+                        const nombreCell = $('<td>').text(documento._Nombre);
+                        const actionCell = $('<td>');
+
+                        // Crear un enlace de descarga para el PDF correspondiente
+                        const descargarEnlace = $('<a>')
+                            .text('Descargar PDF')
+                            .attr('href', `data:application/pdf;base64, ${documento._Documento}`)
+                            .attr('download', `${documento._Nombre}.pdf`);
+
+                        // Agregar el enlace a la celda 'Acción'
+                        actionCell.append(descargarEnlace);
+
+                        // Agregar celdas a la fila
+                        newRow.append(idCell, nombreCell, actionCell);
+
+                        // Agregar la fila a la tabla
+                        tablaBody.append(newRow);
+                    });
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error en la solicitud inicial:", status, error);
+                }
+            });
+
+            // Evento change del ComboBox
+            $('#comboBoxID').on('change', function () {
+                var selectedId = $(this).val(); // Obtener el value seleccionado en el ComboBox
+
+                // Realizar la solicitud AJAX utilizando el ID seleccionado
+                $.ajax({
+                    url: "https://localhost:7167/api/ListarComponentes/actas_sesiones_administracion/" + selectedId,
+                    type: "GET",
+                    success: function (data) {
+                        // Lógica para manejar la respuesta utilizando el ID seleccionado
+                        const tablaBody = $('#documentosTabla tbody');
+
+                        // Limpiar la tabla antes de agregar nuevos datos
+                        tablaBody.empty();
+
+                        // Recorrer los datos obtenidos y construir filas para la tabla
+                        data.forEach(function (documento) {
+                            const newRow = $('<tr>');
+                            const idCell = $('<td>').text(documento.id);
+                            const nombreCell = $('<td>').text(documento._Nombre);
+                            const actionCell = $('<td>');
+
+                            // Crear un enlace de descarga para el PDF correspondiente
+                            const descargarEnlace = $('<a>')
+                                .text('Descargar PDF')
+                                .attr('href', `data:application/pdf;base64, ${documento._Documento}`)
+                                .attr('download', `${documento._Nombre}.pdf`);
+
+                            // Agregar el enlace a la celda 'Acción'
+                            actionCell.append(descargarEnlace);
+
+                            // Agregar celdas a la fila
+                            newRow.append(idCell, nombreCell, actionCell);
+
+                            // Agregar la fila a la tabla
+                            tablaBody.append(newRow);
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Error en la solicitud:", status, error);
+                    }
+                });
+            });
+        });
+        // $.ajax({
+        //     url: "https://localhost:7167/api/ListarComponentes/anios_actas",
+        //     type: "GET",
+        //     success: function (actasSesiones) {
+        //         console.log('jjjjjj', actasSesiones);
+        //         var comboBox = document.getElementById("comboBoxID");
+
+        //         // Iterar sobre los datos y agregar opciones al ComboBox
+        //         actasSesiones.forEach(function (item) {
+        //             var option = document.createElement("option");
+        //             option.value = item.anios; // Establecer el valor del option con el año
+        //             option.text = item.anios; // Establecer el texto visible del option con el año
+        //             comboBox.appendChild(option); // Agregar la opción al ComboBox
+        //         });
+
+        //         // Obtener el ID necesario para la segunda llamada AJAX
+        //         var id = actasSesiones[0].id; // Suponiendo que necesitas el ID del primer elemento de actasSesiones
+
+        //         // Realizar la segunda solicitud AJAX utilizando el ID obtenido
+        //         $.ajax({
+        //             url: "https://localhost:7167/api/ListarComponentes/actas_sesiones_administracion/" + id,
+        //             type: "GET",
+        //             success: function (data) {
+        //                 const tablaBody = $('#documentosTabla tbody');
+        //                 console.log(data);
+        //                          // Limpiar la tabla antes de agregar nuevos datos
+        //                          tablaBody.empty();
+
+        //                          // Recorrer los datos obtenidos y construir filas para la tabla
+        //                          data.forEach(function (documento) {
+        //                              const newRow = $('<tr>');
+        //                              const idCell = $('<td>').text(documento.id);
+        //                              const nombreCell = $('<td>').text(documento._Nombre);
+        //                              const actionCell = $('<td>');
+
+        //                              // Crear un enlace de descarga para el PDF correspondiente
+        //                              const descargarEnlace = $('<a>')
+        //                                  .text('Descargar PDF')
+        //                                  .attr('href', `data:application/pdf;base64, ${documento._Documento}`)
+        //                                  .attr('download', `${documento._Nombre}.pdf`);
+
+        //                              // Agregar el enlace a la celda 'Acción'
+        //                              actionCell.append(descargarEnlace);
+
+        //                              // Agregar celdas a la fila
+        //                              newRow.append(idCell, nombreCell, actionCell);
+
+        //                              // Agregar la fila a la tabla
+        //                              tablaBody.append(newRow);
+        //                          });
+        //             },
+        //             error: function (xhr, status, error) {
+        //                 console.error("Error en la segunda solicitud:", status, error);
+        //             }
+        //         });
+        //     },
+        //     error: function (xhr, status, error) {
+        //         console.error("Error en la primera solicitud:", status, error);
+        //     }
+        // });
+
+       
+    </script>
+</body>
+</html>
+

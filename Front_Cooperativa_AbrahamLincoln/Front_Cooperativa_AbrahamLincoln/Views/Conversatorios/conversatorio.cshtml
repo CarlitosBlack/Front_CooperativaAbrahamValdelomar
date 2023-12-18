@@ -1,0 +1,255 @@
+﻿@model IEnumerable<Front_Cooperativa_AbrahamLincoln.Entidades.IConversatorio>
+@{
+    ViewData["Title"] = "conversatorio";
+}
+
+@* <!DOCTYPE html> *@
+<html>
+<head>
+    <title>Tu Título</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <!-- Enlaza tu archivo CSS -->
+    @*     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/normas.css" />
+    <link rel="stylesheet" href="~/css/login.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/acceso.css" /> *@
+    @* <link rel="stylesheet" href="~/css/bootstrap.min.css" /> *@
+    <!-- Otros elementos del encabezado -->
+</head>
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="#OrganizaciónSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Organización</a>
+                        <ul class="collapse list-unstyled" id="OrganizaciónSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/EstructuraGobierno/estructuraGobierno">Estructuras de Gobirerno</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/Directivos/directivo">Directivos</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#ÓrganosdeGestiónSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Órganos de Gestión</a>
+                        <ul class="collapse list-unstyled" id="ÓrganosdeGestiónSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/Cooperativa/cooperativa">Cooperativa</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/Colegio/colegio">Colegio</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#AsambleaGeneralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Asamblea General</a>
+                        <ul class="collapse list-unstyled" id="AsambleaGeneralSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/Asamblea/asamblea">Asambleas</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#ConsejoAdministracionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Consejo Administracion</a>
+                        <ul class="collapse list-unstyled" id="ConsejoAdministracionSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/ActaSesionesAdministracion/acta_sesiones_administracion">Actas de Sesiones</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/InformacionSocioAdministracion/infoSocioAdministracion">Informaciones al Socio</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/ReportesFinancieros/reportesFinancieros">Reportes Financieros</a>
+                            </li>
+                            <li>
+                                <a href="#ProyectoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Proyecto</a>
+                                <ul class="collapse list-unstyled" id="ProyectoSubmenu">
+                                    <li>
+                                        <a href="https://localhost:7192/InfraestructuraProyecto/infraestructraProyecto">Infraestructura</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://localhost:7192/OperativosProyectos/operativosProyectos">Operaciones</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://localhost:7192/PedagogicosProyectos/pedagogicosProyectos">Pedagogicos</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/ContratosAdquisiciones/contratosAdquisiciones">Contratos y Adquisiciones</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#ConsejodeVigilanciaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Consejo de Vigilancia</a>
+                        <ul class="collapse list-unstyled" id="ConsejodeVigilanciaSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/ActaSesionesVigilancia/actaSesionesVigilancia">Actas de Sesiones</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/InformacionSocioVigilancia/informacionSocioVigilancia">Información al Socio</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <a href="#ComitéElectoralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comité Electoral</a>
+                        <ul class="collapse list-unstyled" id="ComitéElectoralSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/ProcesosElectorales/procesosElectorales">Procesos Electorales</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/InformacionSocioComiteElectoral/informacionSocioComiteElectoral">Información al Socio</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#ComitéEducCoopSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comité Educ. Coop.</a>
+                        <ul class="collapse list-unstyled" id="ComitéEducCoopSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/InformacionGeneral/informacionGeneral">Informacón General</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/Conversatorios/conversatorio">Conversatorios</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/TalleresInduccion/talleresInduccion">Talleres de Inducción</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#GerenciaGeneralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gerencia General</a>
+                        <ul class="collapse list-unstyled" id="GerenciaGeneralSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/InformacionSocioGerencia/informacionSocioGerencia">Información al Socio</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/DocumentoProceso/documentoProceso">Procesos</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#ComitésSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comités</a>
+                        <ul class="collapse list-unstyled" id="ComitésSubmenu">
+                            <li>
+                                <a href="https://localhost:7192/Apoyo/apoyo">Apoyo</a>
+                            </li>
+                            <li>
+                                <a href="https://localhost:7192/Especiales/especiales">Especiales</a>
+                            </li>
+                        </ul>
+                    </li>
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://abrahamlincoln.edu.pe/language/en/home-2/">Colegio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Historia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Proveedores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="normaslegales.html">Normas Legales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Seguro Estudiantil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Procesos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div style="text-align: right; font-size: 30px; font-family: Century Gothic; margin-right: 30px;">Conversatorio</div>
+            <hr />
+
+            <section class="center">
+                <div class="redondeo-tabla">
+                    <table class="table table-striped">
+
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Documento a Descargar</th>
+                        @* <thead>
+
+                            <tr>
+                                <th class="tipo_titulo" colspan="2" style="background-color: #1024E7; color: white;">   </th>
+                            </tr>
+
+                        </thead> *@
+
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <td>@item._Nombre</td>
+                                <td class="centrar-contenido">
+                                    <a href="data:application/pdf;base64,@Convert.ToBase64String(item._Documento)" download="@item._Nombre">
+                                        <!-- Puedes utilizar un icono como una flecha hacia abajo o cualquier otro icono representativo -->
+                                        <img src="~/images/iconopdf.png" alt="Icono PDF" width="30" height="30" style="vertical-align: middle;" />
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+            </section>
+        
+        </div>
+    </div>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>
+

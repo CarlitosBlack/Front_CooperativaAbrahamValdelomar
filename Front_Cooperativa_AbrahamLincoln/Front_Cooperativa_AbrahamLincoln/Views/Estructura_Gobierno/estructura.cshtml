@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Front_Cooperativa_AbrahamLincoln.Entidades.IEstructura_Gobierno>
+@{
+    ViewData["Title"] = "estructura";
+}
+
+<hr />
+
+<form action="/Consulta/EstructuraGobiernoController">
+    <p>Organizacion</p>
+    <p>
+        <select asp-items="ViewBag.Estructura">
+        </select>
+    </p>
+</form>
+
+<hr />
+
+<table class="table table-bordered">
+    <tr>
+        <td>Id</td>
+        <td>nombre</td>
+        <td>imagen</td>
+    </tr>
+    @{
+        int n = 0;
+    }
+    @foreach (var item in Model)
+    {
+        n++;
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Nombre_doc</td>
+            <td>
+                @if (item.Documentos != null && item.Documentos.Length > 0)
+                {
+                    <img src="data:pdf;base64,@Convert.ToBase64String(item.Documentos)" />
+                }
+                else
+                {
+                    <span>""</span>
+                }
+            </td>
+        </tr>
+
+
+    }
+
+</table>
+

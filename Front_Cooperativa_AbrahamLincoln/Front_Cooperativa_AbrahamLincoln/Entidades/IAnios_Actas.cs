@@ -2,7 +2,8 @@
 {
     public class IAnios_Actas
     {
-        public int ID { get; set; }
-        public int Anios { get; set; }
+        public int Id { get; set; }
+        //public int Anios { get; set; }
+        public string Anios { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NidfAm9SToU7Xs3qTBpxrQdTxQNIOYyFe83Gzn/Hk8U=",
+  "Hash": "kvcdHVd3vZuasMDffS2XWXkmHRf7pI+nOLYch5Ip7+0=",
   "Source": "Front_Cooperativa_AbrahamLincoln",
   "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
   "Mode": "Default",
@@ -306,6 +306,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\icono.ico",
+      "SourceId": "Front_Cooperativa_AbrahamLincoln",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
+      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
+      "RelativePath": "icono.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icono.ico"
+    },
+    {
       "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\4.jpg",
       "SourceId": "Front_Cooperativa_AbrahamLincoln",
       "SourceType": "Discovered",
@@ -457,6 +474,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\login.jpg"
+    },
+    {
+      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\login1.jpg",
+      "SourceId": "Front_Cooperativa_AbrahamLincoln",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
+      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
+      "RelativePath": "images/login1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\login1.jpg"
     },
     {
       "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\logo.jpg",

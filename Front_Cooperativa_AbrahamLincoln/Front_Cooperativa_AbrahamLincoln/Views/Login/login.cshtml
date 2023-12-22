@@ -11,12 +11,22 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <link rel="stylesheet" href="~/css/acceso.css">
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
-
+    
 
     @* <link rel="stylesheet" href="wwwroot/css/acceso.css" /> *@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <script>
+            function mostrarAlerta() {
+                Swal.fire({
+                    icon: "error",
+                    title: "Aun no inicias Sesión",
+                    text: "Para ver este contenido, por favor ingresa tu Codigo Socio y Clave",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                });
+            }
+        </script>
 
         <img src="~/images/logotipo.png" alt="abrahamlincoln" width="300" height="100">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -29,54 +39,51 @@
                     <a class="nav-link" href="https://localhost:7192/Login/login">INICIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://abrahamlincoln.edu.pe/language/en/home-2/">COLEGIO</a>
+                    <a class="nav-link" href="https://abrahamlincoln.edu.pe/language/en/home-2/" target="_blank">COLEGIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HISTORIA</a>
+                    <a class="nav-link" href="#" onclick="mostrarAlerta()" >HISTORIA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">PROVEEDORES</a>
+                    <a class="nav-link" href="http://181.65.131.105/proveedoresal" target="_blank" >PROVEEDORES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="normaslegales.html">NORMAS LEGALES</a>
+                    <a class="nav-link" href="#" onclick="mostrarAlerta()" >NORMAS LEGALES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">SEGURO ESTUDIANTIL</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">PROCESOS</a>
+                    <a class="nav-link" href="#" onclick="mostrarAlerta()" >SEGURO ESTUDIANTIL</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <main class="container">
-        <div class="row">
-
-            
-
+    <main class="container-lg">
+        <div class="row overlay-scrollbar">
             @* <div id="carouselExampleSlidesOnly" class="carousel slide  " data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="~/images/4.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/images/5.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/images/6.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="~/images/4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="~/images/5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="~/images/6.jpg" class="d-block w-100" alt="...">
+            </div>
+            </div>
             </div>   *@
 
             <div class="col-12 col-md-7 col-lg-7 col-xl-7 col-xxl-8" id="login">
-                <h1>Cooperativa Abraham Lincoln</h1>
+
+                @* <div class="col-md-8" id="login"> *@
+                <h1 class="resaltado">COOPERATIVA ABRAHAM LINCOLN</h1>
+                <p></p>
                 <p></p>
                 <form>
-                    <h3>Ingrese sus Datos</h3>
+                    <h3><b>Ingrese sus Datos</b></h3>
                     <label for="codigo">Código Socio:</label>
                     <p></p>
                     <div class="form-floating mb-3">
-                        <input type="text" id="codigo" placeholder="S0000000">
+                        <input type="text" class="form-control" id="codigo" placeholder="S0000000">
                     </div>
                     <label for="clave">Clave:</label>
                     <p></p>
@@ -84,23 +91,29 @@
                         <input type="password" id="password" class="form-control"
                                placeholder="Password">
                     </div>
-                    <button type="button" class="btn" onclick="iniciarSesion()">Ingresar</button>
+                    <button type="button" class="btn" onclick="iniciarSesion()" id="boton-ingreso">Ingresar</button>
                     <br>
+                    <div>
+                        <label>Si no recuerda su clave, solicitarlo al correo: <a class="nav-link" href="mailto:sistema@abrahamlincoln.edu.pe">sistema@abrahamlincoln.edu.pe</a>	</label>
+                    </div>
                     @* <div class="enlaces">
-                        <span>Recuperar Clave:</span>
-                        <a href="#">Solicitar Clave</a>
+                    <span>Recuperar Clave:</span>
+                    <a href="#">Solicitar Clave</a>
                     </div> *@
                 </form>
             </div>
 
             @* <div class="col-12 col-md-5 col-lg-5 col-xl-5 col-xxl-4" id="imagen"> *@
-            <div class=" col-12 col-md-7 col-lg-7 col-xl-7 col-xxl-12 " id="imagen">              
-                    <img class="photo" src="~/images/login.jpg" alt="Imagen">
+             <div class="col-12 col-md-5 col-lg-5 col-xl-5 col-xxl-4 " id="imagen">
+                <img class="photo" src="~/images/login.jpg" alt="Imagen">
             </div>
 
-        </div>
+            
 
+
+        </div>
     </main>
+    
 
     @* <footer class="footer">
         <div class="container">
@@ -114,14 +127,23 @@
     <script src="~/js/popper.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/main.js"></script>
+    <!-- Incluir SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
-    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <!-- Incluir SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    @* <script src="~/Scripts/jquery-3.6.0.min.js"></script> *@
+    @* <script src="~/js/funciones.js"></script> *@
    @*  <script>
         //function redireccionar() {
         //     window.location.href = 'https://localhost:7192/';
         // }
     </script> *@
+
     <script>
+        
         function iniciarSesion() {
         var codigo = $("#codigo").val(); // Obtener el valor del campo código
         var password = $("#password").val(); // Obtener el valor del campo contraseña
@@ -133,30 +155,66 @@
 
 
         $.ajax({
-            url: 'https://localhost:7167/api/Test/Login',
+            // url: 'https://localhost:7167/api/Test/Login',
+                url: 'https://localhost:7167/api/Loggin/Login',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(credenciales),
             success: function (response) {
                 // Manejar la respuesta del servidor en caso de éxito
                 console.log(response);
-                    
-                  window.location.href = 'https://localhost:7192/';
-                    
+
+                  window.location.href = 'https://localhost:7192/Consulta/index';
+                    // nombredeUsuario(response.nombreUsuario)
+
+                    let timerInterval;
+                    Swal.fire({
+                        title: "Iniciando Sesion",
+                        html: "Estara entrando en... <b></b> millisegundos.",
+                        timer: 2000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading();
+                            const timer = Swal.getPopup().querySelector("b");
+                            timerInterval = setInterval(() => {
+                                timer.textContent = `${Swal.getTimerLeft()}`;
+                            }, 100);
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval);
+                        }
+                    }).then((result) => {
+                        /* Read more about handling dismissals below */
+                        if (result.dismiss === Swal.DismissReason.timer) {
+                            console.log("I was closed by the timer");
+                        }
+                    });
                 // Redirigir a una página de inicio de sesión exitoso o realizar alguna acción
             },
             error: function (error) {
                 // Manejar errores de la solicitud al servidor
                 console.log(error.responseJSON);
                     if (error.responseJSON && error.responseJSON.mensaje) {
-                        alert(error.responseJSON.mensaje);
+                        // alert(error.responseJSON.mensaje);
+                        Swal.fire({
+                            icon: "error",
+                            title: "Error al Ingresar",
+                            text: "Codigo Socio y/o Clave Incorrecta",
+                            // footer: '<a href="#">Why do I have this issue?</a>'
+                        });
                     } else {
-                        alert("Error desconocido al iniciar sesión.");
+                        // alert("Error desconocido al iniciar sesión.");
+                        Swal.fire({
+                            title: "Error",
+                            text: "Error desconocido al iniciar sesión.",
+                            icon: "question"
+                        });
                     }
                 // Mostrar un mensaje de error al usuario o realizar alguna acción
             }
         });
         }
+        iniciarSesion();
 
     </script>
 </body>

@@ -50,16 +50,22 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: left;
-  background-color: #fff; }
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    /*Cambios de FONDO*/
+    /*background-color: #fff; */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.938),rgba(255, 255, 255, 0.928)), url('/images/fondo.jpg');
+    background-repeat: repeat;
+    background-size: 300px 300px; /*Ajusta estos valores según el tamaño que desees para tu imagen de fondo */
+}
+    
 
-[tabindex="-1"]:focus {
+    [tabindex="-1"]:focus {
   outline: 0 !important; }
 
 hr {
@@ -8133,12 +8139,15 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.8;
-  font-weight: normal;
-  background: #fafafa;
-  color: gray; }
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: normal;
+
+    /*background: #fafafa;*/
+    
+    color: gray;
+}
 
 a {
   -webkit-transition: .3s all ease;
@@ -8403,25 +8412,27 @@ a[data-toggle="collapse"] {
     border: 1px solid white;
     /*background-color: #fffefa;*/
     font-family: 'Century Gothic';
+    overflow-x: auto;
 }
 
-.redondeo-tabla table {
-    border-right: hidden;
-    border-left: hidden;
-    border-top: hidden;
-    border-bottom: hidden;
-    border-collapse: collapse;
+    .redondeo-tabla table {
+        border-right: hidden;
+        border-left: hidden;
+        border-top: hidden;
+        border-bottom: hidden;
+        border-collapse: collapse;
+        overflow-x: auto;
+    }
 
-}
-
-.redondeo-tabla table th,
-.redondeo-tabla table td {
-    border: 3px;
-    padding: 15px 32px;
-    font-size: 16px;
-    text-align: center;
-    vertical-align: middle;
-}
+    .redondeo-tabla table th,
+    .redondeo-tabla table td {
+        border: 3px;
+        padding: 15px 32px;
+        font-size: 16px;
+        text-align: center;
+        vertical-align: middle;
+        overflow-x: auto;
+    }
 
 /*Footer de ejemplo*/
 /* Estilos para el footer */
@@ -8443,10 +8454,67 @@ a[data-toggle="collapse"] {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #f5f5f5; /* Color de fondo del footer */
-    color: #333; /* Color del texto en el footer */
-    padding: 20px; /* Ajusta el relleno según sea necesario */
+    color: rgba(0, 0, 0, 0.7); /* Color del texto en el footer */
+    /*padding: 10px;*/ /* Ajusta el relleno según sea necesario */
     text-align: center; /* Alineación del texto al centro */
+    bottom: 0;
+    width: 100%;
+    background-color: #D6D4D4;
+    padding: 15px 0;
+    z-index: 2;
+}
+
+
+#salir {
+    background-color: #FF0000; /* Fondo rojo */
+    color: #FFFFFF; /* Texto blanco */
+    /* Otros estilos opcionales */
+    padding: 5px 10px; /* Añade relleno para mejorar la apariencia */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    /* Puedes agregar más estilos según tus necesidades */
+}
+
+.menu {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+}
+    .menu .nav.nav-tabs li a {
+        margin-right: 2rem;
+        font-size: 20px;
+        color: #164193;
+    }
+
+.menu .nav.nav-tabs li a.selected {
+    color: #f00; 
+}
+
+
+
+/*.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}*/
+
+.nombreusuario {
+    font-size: 30px; /* Tamaño de fuente */
+    /*font-weight: bold;*/ /* Texto en negrita */
+    color: #3366cc; /* Color del texto */
+    /*Ejemplo de otros estilos:*/
+    background-color: #f7f7f7; /* Color de fondo */
+    /* border: 2px solid #ccc;*/ /* Borde */
+    padding: 5px; /* Relleno */
+    /*text-align: center;*/
+    font-family: Century Gothic;
 }
 
 

@@ -16,8 +16,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/ActaSesionesAdministracion/acta_sesiones_administracion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0YVNlc2lvbmVzQWRtaW5pc3RyYWNpb25cYWN0YV9zZXNpb25lc19hZG1pbmlzdHJhY2lvbi5jc2h0bWw=
+[D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/ActaSesionesAdministracion/actaSesionesAdministracion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWN0YVNlc2lvbmVzQWRtaW5pc3RyYWNpb25cYWN0YVNlc2lvbmVzQWRtaW5pc3RyYWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/ActaSesionesVigilancia/actaSesionesVigilancia.cshtml]
@@ -32,8 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNhbWJsZWFcYXNhbWJsZWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/cc/acta_sesiones_administracion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcY2NcYWN0YV9zZXNpb25lc19hZG1pbmlzdHJhY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/Colegio/colegio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sZWdpb1xjb2xlZ2lvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/Comedor/comedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tZWRvclxjb21lZG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/Consulta/Index.cshtml]
@@ -120,8 +128,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cbG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/NormasExternas/normasexternas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9ybWFzRXh0ZXJuYXNcbm9ybWFzZXh0ZXJuYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/NormasInternas/normasinternas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9ybWFzSW50ZXJuYXNcbm9ybWFzaW50ZXJuYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/NormasLegales/normaslegales.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9ybWFzTGVnYWxlc1xub3JtYXNsZWdhbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/OperativosProyectos/operativosProyectos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BlcmF0aXZvc1Byb3llY3Rvc1xvcGVyYXRpdm9zUHJveWVjdG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/PabellonDiploma/pabellonDiploma.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFiZWxsb25EaXBsb21hXHBhYmVsbG9uRGlwbG9tYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/PedagogicosProyectos/pedagogicosProyectos.cshtml]
@@ -138,6 +162,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/ReportesFinancieros/reportesFinancieros.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNGaW5hbmNpZXJvc1xyZXBvcnRlc0ZpbmFuY2llcm9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/RevisionEstructura/revisionEstructura.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aXNpb25Fc3RydWN0dXJhXHJldmlzaW9uRXN0cnVjdHVyYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/AbrahamLincoln/frontend/front_aspnet/Front_Cooperativa_AbrahamLincoln/Front_Cooperativa_AbrahamLincoln/Views/SeguroEstudiantil/seguroEstudiantil.cshtml]

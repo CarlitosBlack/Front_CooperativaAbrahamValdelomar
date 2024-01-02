@@ -7,37 +7,22 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class DirectivosController : Controller
     {
-        //public async Task<IActionResult> DirectivosController()
-        //{
-        //    List<IDirectivos> directivos = new List<IDirectivos>();
-
-        //    using (var listarComponentes = new HttpClient())
-        //    {
-
-        //        using (var carga_directivos = await listarComponentes.GetAsync("https://localhost:7212/api/ListarComponentes/directivos"))
-        //        {
-        //            //obteniendo la informacion en Json (texto)
-        //            string respApi1 = await carga_directivos.Content.ReadAsStringAsync();
-        //            //se la pasamos a la lista creada arriba
-        //            directivos = JsonConvert.DeserializeObject<List<IDirectivos>>(respApi1);
-        //            ViewBag.Estructura = new SelectList(directivos);
-        //        }
-        //        ViewBag.Directivos = new SelectList(directivos);
-
-        //    }
-
-        //    return View(directivos);
-        //}
+        private readonly IConfiguration _configuration;
+        public DirectivosController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
         public async Task<IActionResult> directivo(int? id) {
 
             List<IDirectivos> directivos = new List<IDirectivos>();
             List<ITipo_Equipo_Directivos> equipos = new List<ITipo_Equipo_Directivos>();
-
+            //string valorVariable = _configuration["URL_CONTROLLER"];
             using (var listarComponentes = new HttpClient())
             {
 
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/tipo_equipos"))
+                //using (var carga = await listarComponentes.GetAsync(valorVariable + "/api/ListarComponentes/tipo_equipos"))
+                using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/tipo_equipos"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi1 = await carga.Content.ReadAsStringAsync();
@@ -47,7 +32,7 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 
                 if (id != null)
                 {
-                    using (var carga_directivos = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/directivos/" + id))
+                    using (var carga_directivos = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/directivos/" + id))
                     {
                         //obteniendo la informacion en Json (texto)
                         string respApi1 = await carga_directivos.Content.ReadAsStringAsync();

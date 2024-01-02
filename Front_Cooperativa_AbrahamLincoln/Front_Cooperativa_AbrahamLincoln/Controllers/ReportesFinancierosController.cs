@@ -7,15 +7,20 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class ReportesFinancierosController : Controller
     {
+        private readonly IConfiguration _configuration;
+        public ReportesFinancierosController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<IActionResult> ReportesFinancieros(int? id)
         {
 
             List<ICategoria_Reporte_Financiero> nombreCatRep = new List<ICategoria_Reporte_Financiero>();
             List<IReportes_Financieros> reportes = new List<IReportes_Financieros>();
-
+            //string valorVariable = _configuration["URL_CONTROLLER"];
             using (var listarComponentes = new HttpClient())
             {
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/categoria_reporte_financiero"))
+                using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/categoria_reporte_financiero"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi1 = await carga.Content.ReadAsStringAsync();
@@ -26,7 +31,7 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
                 if (id != null)
                 {
                     using (var resp = await listarComponentes.GetAsync(
-                        "https://localhost:7167/api/ListarComponentes/reportes_financieros/" + id))
+                         "http://173.212.229.137:81/api/ListarComponentes/reportes_financieros/" + id))
                     {
                         string respApi = await resp.Content.ReadAsStringAsync();
                         reportes = JsonConvert.

@@ -1,4 +1,6 @@
-﻿
+﻿@model Front_Cooperativa_AbrahamLincoln.Models.Usuario
+
+
 @{
     ViewData["Title"] = "login";
 }
@@ -12,6 +14,9 @@
     <link rel="stylesheet" href="~/css/acceso.css">
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
     
+    <!-- Incluir SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @* <link rel="stylesheet" href="wwwroot/css/acceso.css" /> *@
 </head>
@@ -36,7 +41,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="https://localhost:7192/Login/login">INICIO</a>
+                    <a class="nav-link" href="/Login/login">INICIO</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://abrahamlincoln.edu.pe/language/en/home-2/" target="_blank">COLEGIO</a>
@@ -58,19 +63,7 @@
     </nav>
     <main class="container-lg">
         <div class="row overlay-scrollbar">
-            @* <div id="carouselExampleSlidesOnly" class="carousel slide  " data-bs-ride="carousel">
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="~/images/4.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-            <img src="~/images/5.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-            <img src="~/images/6.jpg" class="d-block w-100" alt="...">
-            </div>
-            </div>
-            </div>   *@
+           
 
             <div class="col-12 col-md-7 col-lg-7 col-xl-7 col-xxl-8" id="login">
 
@@ -78,12 +71,12 @@
                 <h1 class="resaltado">COOPERATIVA ABRAHAM LINCOLN</h1>
                 <p></p>
                 <p></p>
-                <form>
+                 <form>
                     <h3><b>Ingrese sus Datos</b></h3>
                     <label for="codigo">Código Socio:</label>
                     <p></p>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="codigo" placeholder="S0000000">
+                        <input type="text" class="form-control" id="codigo" placeholder="Codigo">
                     </div>
                     <label for="clave">Clave:</label>
                     <p></p>
@@ -96,30 +89,118 @@
                     <div>
                         <label>Si no recuerda su clave, solicitarlo al correo: <a class="nav-link" href="mailto:sistema@abrahamlincoln.edu.pe">sistema@abrahamlincoln.edu.pe</a>	</label>
                     </div>
-                    @* <div class="enlaces">
-                    <span>Recuperar Clave:</span>
-                    <a href="#">Solicitar Clave</a>
-                    </div> *@
-                </form>
+                </form> 
+
+                @* <form asp-controller="Login" asp-action="login" method="post">
+                    <input type="text" asp-for="Codigo" placeholder="Usuario" />
+                    <input type="password" asp-for="Contrasena" placeholder="Contraseña" />
+                    <button type="submit">Iniciar Sesión</button>
+                    <span asp-validation-for="Codigo" class="text-danger"></span>
+                    <span asp-validation-for="Contrasena" class="text-danger"></span>
+                </form> *@
+
+                    @* <form id="loginForm" asp-controller="Login" asp-action="login" method="post">
+                        <h3><b>Ingrese sus Datos</b></h3>
+                        <label for="codigo">Código Socio:</label>
+                        <p></p>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" asp-for="Codigo" placeholder="S0000000">
+                        </div>
+                        <label for="clave">Clave:</label>
+                        <p></p>
+                        <div class="form-floating mb-3">
+                            <input type="password" asp-for="Contrasena" class="form-control" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn" >Iniciar Sesión</button>
+                        <br>
+                        <div>
+                        <label>Si no recuerda su clave, solicitarlo al correo: <a class="nav-link" href="mailto:sistema@abrahamlincoln.edu.pe">sistema@abrahamlincoln.edu.pe</a>	</label>
+                        </div>
+
+                    
+
+                    </form>  *@
+
+                     @* <script>
+                        document.getElementById('loginForm').addEventListener('submit', function (e) {
+                            e.preventDefault(); // Evitar que el formulario se envíe de manera predeterminada
+
+                            // Obtener los datos del formulario
+                            const formData = new FormData(this);
+
+                            // Realizar la solicitud POST al controlador de inicio de sesión
+                            fetch('/Login/login', {
+                                method: 'POST',
+                                body: formData
+                            })
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error('Error en la solicitud.');
+                                    }
+                                    return response.json();
+                                })
+                                .then(data => {
+                                    // Verificar la respuesta del servidor y mostrar la notificación correspondiente
+                                    if (data && data.inicioSesionExitoso) {
+                                        // Mostrar el mensaje de éxito
+                                        Swal.fire({
+                                            title: "Cargando Sesión",
+                                            html: "Estara entrando en... <b></b> millisegundos.",
+                                            timer: 2000,
+                                            timerProgressBar: true,
+                                            didOpen: () => {
+                                                Swal.showLoading();
+                                                const timer = Swal.getPopup().querySelector("b");
+                                                timerInterval = setInterval(() => {
+                                                    timer.textContent = `${Swal.getTimerLeft()}`;
+                                                }, 100);
+                                            },
+                                            willClose: () => {
+                                                clearInterval(timerInterval);
+                                            }
+                                        }).then((result) => {
+                                            if (result.dismiss === Swal.DismissReason.timer) {
+                                                console.log("I was closed by the timer");
+                                            }
+                                            // Redirigir a otra página después de iniciar sesión con éxito
+                                            window.location.href = '/Consulta/Index';
+                                        });
+                                    } else {
+                                        // Mostrar el mensaje de error en caso de credenciales incorrectas
+                                        Swal.fire({
+                                            icon: "error",
+                                            title: "Error al Ingresar",
+                                            text: "Codigo Socio y/o Clave Incorrecta",
+                                            // footer: '<a href="#">Why do I have this issue?</a>'
+                                        });
+                                    }
+                                })
+                                .catch(error => {
+                                    // Mostrar un mensaje de error genérico en caso de otros errores
+                                    Swal.fire({
+                                        title: "Error",
+                                        text: "Error desconocido al iniciar sesión.",
+                                        icon: "question"
+                                    });
+                                    console.error('Error:', error);
+                                });
+                        });
+                    </script>  *@
+
+
             </div>
 
             @* <div class="col-12 col-md-5 col-lg-5 col-xl-5 col-xxl-4" id="imagen"> *@
              <div class="col-12 col-md-5 col-lg-5 col-xl-5 col-xxl-4 " id="imagen">
                 <img class="photo" src="~/images/login.jpg" alt="Imagen">
             </div>
-
+            @* <p>@Model.ToString()</p> *@
             
 
 
         </div>
     </main>
     
-
-    @* <footer class="footer">
-        <div class="container">
-            <p>Este es un footer de ejemplo.</p>
-        </div>
-    </footer> *@
 
 
     @* <script src="~/js/bootstrap.js"></script> *@
@@ -141,9 +222,8 @@
         //     window.location.href = 'https://localhost:7192/';
         // }
     </script> *@
-
-    <script>
-        
+    
+     <script>
         function iniciarSesion() {
         var codigo = $("#codigo").val(); // Obtener el valor del campo código
         var password = $("#password").val(); // Obtener el valor del campo contraseña
@@ -155,16 +235,34 @@
 
 
         $.ajax({
-            // url: 'https://localhost:7167/api/Test/Login',
-                url: 'https://localhost:7167/api/Loggin/Login',
+                // url: 'https://localhost:7167/api/Loggin/Login',
+                url: 'http://173.212.229.137:81/api/Loggin/Login',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(credenciales),
             success: function (response) {
                 // Manejar la respuesta del servidor en caso de éxito
                 console.log(response);
+                    var nombreUsuario = response.nombreUsuario;
+                    // console.log(nombreUsuario);
+                    // TempData["NombreUsuario"] = nombreUsuario;
 
-                  window.location.href = 'https://localhost:7192/Consulta/index';
+                    $.ajax({
+                        url: '/Consulta/Index',
+                        type: 'POST', // O GET dependiendo de tus necesidades
+                        data: { nombreUsuario: nombreUsuario },
+                        success: function (response) {
+                            // Maneja la respuesta si es necesaria
+                            console.log("Datos enviados con éxito al otro controlador");
+                        },
+                        error: function (error) {
+                            // Maneja el error si es necesario
+                            console.error("Error al enviar datos al otro controlador:", error);
+                        }
+                    });
+
+                    window.location.href = '/Consulta/Index';
+                    // window.location.href = '/Consulta/index';
                     // nombredeUsuario(response.nombreUsuario)
 
                     let timerInterval;
@@ -216,7 +314,15 @@
         }
         iniciarSesion();
 
-    </script>
+        
+
+
+    </script> 
+
+
+    
+
+
 </body>
 </html>
 

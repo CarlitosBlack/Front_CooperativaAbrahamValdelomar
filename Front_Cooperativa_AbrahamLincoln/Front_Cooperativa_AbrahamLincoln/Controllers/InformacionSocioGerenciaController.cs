@@ -7,16 +7,21 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class InformacionSocioGerenciaController : Controller
     {
+        private readonly IConfiguration _configuration;
+        public InformacionSocioGerenciaController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<IActionResult> InformacionSocioGerencia(int? id)
         {
 
             List<ICategoria_Info_Socio_Gerencia> categoria = new List<ICategoria_Info_Socio_Gerencia>();
             List<IInfo_Socio_Gerencia> infoSocioGerencia = new List<IInfo_Socio_Gerencia>();
-
+            //string valorVariable = _configuration["URL_CONTROLLER"];
             using (var listarComponentes = new HttpClient())
             {
 
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/categoria_info_socio_generencia"))
+                using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/categoria_info_socio_generencia"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi1 = await carga.Content.ReadAsStringAsync();
@@ -27,7 +32,7 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 
                 if (id != null)
                 {
-                    using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/informacion_socio_gerencia/" + id))
+                    using (var carga = await listarComponentes.GetAsync( "http://173.212.229.137:81/api/ListarComponentes/informacion_socio_gerencia/" + id))
                     {
                         //obteniendo la informacion en Json (texto)
                         string respApi1 = await carga.Content.ReadAsStringAsync();

@@ -7,16 +7,22 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class ActaSesionesAdministracionController : Controller
     {
+        private readonly IConfiguration _configuration;
+
+        public ActaSesionesAdministracionController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<IActionResult> ActaSesionesAdministracion(int? id)
         {
 
             List<IAnios_Actas> aniosActas = new List<IAnios_Actas>();
             List<IActas_Sesiones_Administracion> actasSesionesAdministracion = new List<IActas_Sesiones_Administracion>();
-
-            using (var listarComponentes = new HttpClient())
+            //string valorVariable = _configuration["URL_CONTROLLER"];
+            using (var httpcliente = new HttpClient())
             {
 
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/anios_actas"))
+                using (var carga = await httpcliente.GetAsync("http://173.212.229.137:81/api/ListarComponentes/anios_actas"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi1 = await carga.Content.ReadAsStringAsync();
@@ -27,8 +33,8 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 
                 if (id != null)
                 {
-                    using (var resp = await listarComponentes.GetAsync(
-                        "https://localhost:7167/api/ListarComponentes/actas_sesiones_administracion/" + id))
+                    using (var resp = await httpcliente.GetAsync(
+                         "http://173.212.229.137:81/api/ListarComponentes/actas_sesiones_administracion/" + id))
                     {
                         string respApi = await resp.Content.ReadAsStringAsync();
                         actasSesionesAdministracion = JsonConvert.

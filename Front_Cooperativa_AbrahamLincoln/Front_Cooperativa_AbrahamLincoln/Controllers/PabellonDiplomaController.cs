@@ -7,14 +7,19 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class PabellonDiplomaController : Controller
     {
+        private readonly IConfiguration _configuration;
+        public PabellonDiplomaController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<IActionResult> PabellonDiploma()
         {
             List<IPabellon_Diploma> pabellon = new List<IPabellon_Diploma>();
-
+            //string valorVariable = _configuration["URL_CONTROLLER"];
             using (var listarComponentes = new HttpClient())
             {
 
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/pabellon_diploma"))
+                using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/pabellon_diploma"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi1 = await carga.Content.ReadAsStringAsync();

@@ -1,0 +1,203 @@
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-lg {
+    /*height: 100vh;*/
+    position: relative;
+    /*z-index: 1;*/ /* Asegura que el contenido esté sobre el footer */
+    padding-bottom: 60px; /* Ajusta según la altura del footer */
+    overflow-y: auto; /* Barra deslizable si el contenido se desborda */
+    height: 100vh;
+}
+
+.row {
+    height: 50%;
+    width: 100%;
+}
+
+
+.logo img {
+    max-width: 900px;
+    height: 50px;
+    transform: scale(0.9);
+}
+
+/* Formulario de login */
+#login {
+    max-width: 300px;
+    height: 250px;
+    margin: 0em 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: none;
+    position: relative;
+    /*overflow: hidden;*/
+    /*Asegura que el formulario de login esté en un plano superior */
+    z-index: 1; /*Establece la posición z del formulario de login */
+}
+
+#login h2 {
+    margin-top: 0;
+}
+
+#login form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login label {
+    font-weight: bold;
+}
+
+#login {
+    flex: 1;
+}
+
+#imagen {
+    /*position: absolute;*/
+    flex: 1;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    justify-content: center;
+}
+
+    #imagen img {
+        /*max-width: 100%;*/
+        width: 750px;
+        height: 70%;
+        border-radius: 25px 25px 25px 25px;
+    }
+
+/*#imagen {
+    height: 100vh;*/ /* Establece la altura al 100% del viewport height (alto de la ventana del navegador) */
+    /*width: 100%;*/ /* Ocupa el 100% del ancho disponible del contenedor padre */
+/*}
+
+    #imagen img {
+        height: 100%;*/ /* La imagen ocupa el 100% de la altura del div */
+        /*width: 100%;*/ /* La imagen ocupa el 100% del ancho del div */
+        /*object-fit: cover;*/ /* La imagen se ajusta para cubrir completamente su contenedor manteniendo la proporción */
+    /*}*/
+
+
+
+/*#imagen {
+    position: absolute;*/ /*Posicionamiento absoluto */
+    /*top: 10%;
+    right: 23%;*/
+    /*left: 48%;*/
+    /*width: 100%;*/ /* Ancho al 100% del contenedor padre */
+    /*height: 100%;*/ /* Altura al 100% del contenedor padre */
+    /*z-index: -1;*/ /* Asegura que la imagen esté detrás del formulario de login */
+    /*overflow: hidden;*/ /* Oculta el exceso de la imagen si es necesario */
+/*}
+
+    #imagen img {
+        width: 100%;*/ /* Ancho al 100% del contenedor */
+        /*height: 100%;*/ /* Altura al 100% del contenedor */
+        /*object-fit: cover;*/ /* Ajusta la imagen para cubrir completamente su contenedor manteniendo la proporción */
+    /*}*/
+
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    #login,
+    #imagen {
+        
+        flex: none;
+        width: 100%;
+    }
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.938),rgba(255, 255, 255, 0.928)), url('/images/fondo.jpg');
+    background-repeat: repeat;
+    background-size: 300px 300px; /*Ajusta estos valores según el tamaño que desees para tu imagen de fondo */
+}
+
+@media(max-width: 990px) {
+    .navigation {
+        padding: 10px 100px;
+    }
+
+    .toggle {
+        display: flex;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .close {
+        display: block;
+        position: absolute;
+        color: #fff;
+        right: 0;
+        font-size: 30px;
+        cursor: pointer;
+        margin: 50px;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #F9C226;
+        left: 0;
+        top: 0;
+        transition: all 3s ease;
+    }
+
+    .nav ul li {
+        display: block;
+        font-size: 30px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .nav ul > li > a:hover {
+        color: #070000;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #fff;
+    }
+
+    /*Para ocultar la imagen cuando se abra web en celulares*/
+    .photo {
+        display: none;
+    }
+
+    .form-cont {
+        width: 100%;
+        max-height: 100%;
+    }
+
+
+}
+
+/*.btn {
+    background-color: rgba(228, 0, 70, 1);
+    color: white;
+}*/
+
+
+#boton-ingreso {
+    background-color: rgba(228, 0, 70, 1);
+    color: white;
+}
+.resaltado {
+    font-size: 45px; /* Tamaño de fuente más grande */
+    color: #000000; /* Cambio de color (rojo en este caso) */
+    /*letter-spacing: 1.5px;*/ /* Aumentar el espaciado entre letras */
+    /* Otros estilos opcionales para mejorar la apariencia */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    /* Puedes agregar más estilos según tus necesidades */
+    font-weight: bold;
+}

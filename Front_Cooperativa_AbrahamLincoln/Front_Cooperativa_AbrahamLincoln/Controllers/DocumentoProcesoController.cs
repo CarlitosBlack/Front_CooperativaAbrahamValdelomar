@@ -7,15 +7,20 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class DocumentoProcesoController : Controller
     {
+        private readonly IConfiguration _configuration;
+        public DocumentoProcesoController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<IActionResult> DocumentoProceso(int? id)
         {
             List<IDocumento_Proceso> documentos = new List<IDocumento_Proceso>();
             List<IProceso> procesos = new List<IProceso>();
-
+            //string valorVariable = _configuration["URL_CONTROLLER"];
             using (var listarComponentes = new HttpClient())
             {
 
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/procesos"))
+                using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/procesos"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi1 = await carga.Content.ReadAsStringAsync();
@@ -26,7 +31,7 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 
                 if (id != null)
                 {
-                    using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/documentos_procesos/" + id))
+                    using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/documentos_procesos/" + id))
                     {
                         //obteniendo la informacion en Json (texto)
                         string respApi1 = await carga.Content.ReadAsStringAsync();

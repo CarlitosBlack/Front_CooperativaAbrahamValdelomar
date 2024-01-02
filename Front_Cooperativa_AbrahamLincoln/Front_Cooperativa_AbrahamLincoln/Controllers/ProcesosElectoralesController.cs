@@ -7,16 +7,20 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class ProcesosElectoralesController : Controller
     {
+        private readonly IConfiguration _configuration;
+        public ProcesosElectoralesController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<IActionResult> ProcesosElectorales(int? id)
         {
             List<IAnios_Procesos_Electorales> anio = new List<IAnios_Procesos_Electorales>();
             List<IProcesos_Electorale> procesosElectorales = new List<IProcesos_Electorale>();
-
-        
+            //string valorVariable = _configuration["URL_CONTROLLER"];
 
             using (var listarComponentes = new HttpClient())
             {
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/anios_procesos_electorales"))
+                using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/anios_procesos_electorales"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi1 = await carga.Content.ReadAsStringAsync();
@@ -27,7 +31,7 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 
                 if (id != null)
                 {
-                    using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/procesos_electorales/" + id))
+                    using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/procesos_electorales/" + id))
                     {
                         //obteniendo la informacion en Json (texto)
                         string respApi1 = await carga.Content.ReadAsStringAsync();

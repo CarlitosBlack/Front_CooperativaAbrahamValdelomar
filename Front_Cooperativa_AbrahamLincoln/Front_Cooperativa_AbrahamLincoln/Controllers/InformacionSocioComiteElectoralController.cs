@@ -7,14 +7,19 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class InformacionSocioComiteElectoralController : Controller
     {
+        private readonly IConfiguration _configuration;
+        public InformacionSocioComiteElectoralController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<IActionResult> InformacionSocioComiteElectoral(int? id)
         {
             List<ICategoriaComiteElectoral> categoria = new List<ICategoriaComiteElectoral>();
             List<IInfo_Socio_Comite_Electoral> infoSocioComiteElectoral = new List<IInfo_Socio_Comite_Electoral>();
-
+            //string valorVariable = _configuration["URL_CONTROLLER"];
             using (var listarComponentes = new HttpClient())
             {
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/categoria_comite_electoral"))
+                using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/categoria_comite_electoral"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi1 = await carga.Content.ReadAsStringAsync();
@@ -25,7 +30,7 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 
                 if (id != null)
                 {
-                    using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/informacion_socio_comite_electoral/" + id))
+                    using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/informacion_socio_comite_electoral/" + id))
                     {
                         //obteniendo la informacion en Json (texto)
                         string respApi1 = await carga.Content.ReadAsStringAsync();

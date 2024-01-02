@@ -7,15 +7,19 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class EspecialesController : Controller
     {
+        private readonly IConfiguration _configuration;
+        public EspecialesController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<IActionResult> Especiales()
         {
-
             List<IEspeciales> especiales = new List<IEspeciales>();
-
+            //string valorVariable = _configuration["URL_CONTROLLER"];
             using (var listarComponentes = new HttpClient())
             {
 
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/especiales"))
+                using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/especiales"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi1 = await carga.Content.ReadAsStringAsync();

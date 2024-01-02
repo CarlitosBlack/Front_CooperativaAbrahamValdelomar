@@ -7,15 +7,22 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
     public class EstructuraGobiernoController : Controller
     {
+        private readonly IConfiguration _configuration;
+        public EstructuraGobiernoController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<IActionResult> EstructuraGobierno()
         {
-            List<IEstructura_Gobierno> estructura = new List<IEstructura_Gobierno>();
 
+            List<IEstructura_Gobierno> estructura = new List<IEstructura_Gobierno>();
+            //string valorVariable = _configuration["URL_CONTROLLER"];
 
             using (var listarComponentes = new HttpClient())
             {
 
-                using (var carga = await listarComponentes.GetAsync("https://localhost:7167/api/ListarComponentes/estructura_gobierno"))
+                //using (var carga = await listarComponentes.GetAsync(valorVariable + "/api/ListarComponentes/estructura_gobierno"))
+                using (var carga = await listarComponentes.GetAsync("http://173.212.229.137:81/api/ListarComponentes/estructura_gobierno"))
                 {
                     //obteniendo la informacion en Json (texto)
                     string respApi = await carga.Content.ReadAsStringAsync();

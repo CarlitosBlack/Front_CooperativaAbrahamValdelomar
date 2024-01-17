@@ -1,7 +1,9 @@
 ﻿using Front_Cooperativa_AbrahamLincoln.Entidades;
+using Front_Cooperativa_AbrahamLincoln.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
@@ -15,6 +17,11 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
         }
         public async Task<IActionResult> ActaSesionesAdministracion(int? id)
         {
+            var nombreUsuario = new Credenciales();
+            var sessionData = HttpContext.Session.Get("UserSession");
+            var serializedData = Encoding.UTF8.GetString(sessionData);
+            nombreUsuario = JsonConvert.DeserializeObject<Credenciales>(serializedData);
+            ViewBag.Nombre = nombreUsuario.NombreUsuario;
 
             List<IAnios_Actas> aniosActas = new List<IAnios_Actas>();
             List<IActas_Sesiones_Administracion> actasSesionesAdministracion = new List<IActas_Sesiones_Administracion>();

@@ -1,8 +1,7 @@
-﻿@model IEnumerable<Front_Cooperativa_AbrahamLincoln.Entidades.ILogin>
+﻿
 @{
     ViewData["Title"] = "Vista Principal";
-    // var nombreUsuario = TempData["NombreUsuario"] as string;
-    var nombreUsuario = TempData["NombreUsuario"];
+    @inject IConfiguration Config
 }
 
 @* <!DOCTYPE html> *@
@@ -14,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- Enlaza tu archivo CSS -->
     @* <link rel="stylesheet" href="~/css/site.css" /> *@
@@ -32,17 +31,20 @@
         <nav id="sidebar">
             <div class="p-4 pt-5">
                 @* <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a> *@
-                <img src="~/images/logo.jpg" class="img logo rounded-circle mb-4" />
+                @* <img src="/images/logo.png" class="img logo rounded-circle mb-4" /> *@
+                <img src="/images/logo.png" class="img logo rounded-1 mb-4" />
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
                         <a href="#OrganizaciónSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Organización</a>
                         <ul class="collapse list-unstyled" id="OrganizaciónSubmenu">
                             <li>
                                 @* <a href="/EstructuraGobierno/estructuraGobierno">Estructuras de Gobierno</a> *@
-                                <a href="http://173.212.229.137:82/EstructuraGobierno/estructuraGobierno">Estructuras de Gobierno</a>
+                                @* <a href="http://173.212.229.137:82/EstructuraGobierno/estructuraGobierno">Estructuras de Gobierno</a> *@
+                                <a href="/EstructuraGobierno/estructuraGobierno">Estructuras de Gobierno</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/Directivos/directivo">Directivos</a>
+                                @* <a href="http://173.212.229.137:82/Directivos/directivo">Directivos</a> *@
+                                <a href="/Directivos/directivo">Directivos</a>
                             </li>
                         </ul>
                     </li>
@@ -52,10 +54,12 @@
                         <a href="#ÓrganosdeGestiónSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Órganos de Gestión</a>
                         <ul class="collapse list-unstyled" id="ÓrganosdeGestiónSubmenu">
                             <li>
-                                <a href="http://173.212.229.137:82/Cooperativa/cooperativa">Cooperativa</a>
+                                @* <a href="http://173.212.229.137:82/Cooperativa/cooperativa">Cooperativa</a> *@
+                                <a href="/Cooperativa/cooperativa">Cooperativa</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/Colegio/colegio">Colegio</a>
+                                @* <a href="http://173.212.229.137:82/Colegio/colegio">Colegio</a> *@
+                                <a href="/Colegio/colegio">Colegio</a>
                             </li>
                         </ul>
                     </li>
@@ -65,7 +69,8 @@
                         <a href="#AsambleaGeneralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Asamblea General</a>
                         <ul class="collapse list-unstyled" id="AsambleaGeneralSubmenu">
                             <li>
-                                <a href="http://173.212.229.137:82/Asamblea/asamblea">Asambleas</a>
+                                @* <a href="http://173.212.229.137:82/Asamblea/asamblea">Asambleas</a> *@
+                                <a href="/Asamblea/asamblea">Asambleas</a>
                             </li>
                         </ul>
                     </li>
@@ -74,13 +79,16 @@
                         <a href="#ConsejoAdministracionSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Consejo Administración</a>
                         <ul class="collapse list-unstyled" id="ConsejoAdministracionSubmenu">
                             <li>
-                                <a href="http://173.212.229.137:82/ActaSesionesAdministracion/actaSesionesAdministracion">Actas de Sesiones</a>
+                                @* <a href="http://173.212.229.137:82/ActaSesionesAdministracion/actaSesionesAdministracion">Actas de Sesiones</a> *@
+                                <a href="/ActaSesionesAdministracion/actaSesionesAdministracion">Actas de Sesiones</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/InformacionSocioAdministracion/infoSocioAdministracion">Información al Socio</a>
+                                @* <a href="http://173.212.229.137:82/InformacionSocioAdministracion/infoSocioAdministracion">Información al Socio</a> *@
+                                <a href="/InformacionSocioAdministracion/infoSocioAdministracion">Información al Socio</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:80/ReportesFinancieros/reportesFinancieros">Reportes Financieros</a>
+                                @* <a href="http://173.212.229.137:82/ReportesFinancieros/reportesFinancieros">Reportes Financieros</a> *@
+                                <a href="/ReportesFinancieros/reportesFinancieros">Reportes Financieros</a>
                             </li>
                             <li>
                                 @* <a href="#">Proyectos</a> *@
@@ -88,19 +96,23 @@
                                 <a href="#ProyectoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Proyecto</a>
                                 <ul class="collapse list-unstyled" id="ProyectoSubmenu">
                                     <li>
-                                        <a href="http://173.212.229.137:82/InfraestructuraProyecto/infraestructraProyecto">Infraestructura</a>
+                                        @* <a href="http://173.212.229.137:82/InfraestructuraProyecto/infraestructraProyecto">Infraestructura</a> *@
+                                        <a href="/InfraestructuraProyecto/infraestructraProyecto">Infraestructura</a>
                                     </li>
                                     <li>
-                                        <a href="http://173.212.229.137:82/OperativosProyectos/operativosProyectos">Operaciones</a>
+                                        @* <a href="http://173.212.229.137:82/OperativosProyectos/operativosProyectos">Operaciones</a> *@
+                                        <a href="/OperativosProyectos/operativosProyectos">Operaciones</a>
                                     </li>
                                     <li>
-                                        <a href="http://173.212.229.137:82/PedagogicosProyectos/pedagogicosProyectos">Pedagógicos</a>
+                                        @* <a href="http://173.212.229.137:82/PedagogicosProyectos/pedagogicosProyectos">Pedagógicos</a> *@
+                                        <a href="/PedagogicosProyectos/pedagogicosProyectos">Pedagógicos</a>
                                     </li>
                                 
                                 </ul>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/ContratosAdquisiciones/contratosAdquisiciones">Contratos y Adquisiciones</a>
+                                @* <a href="http://173.212.229.137:82/ContratosAdquisiciones/contratosAdquisiciones">Contratos y Adquisiciones</a> *@
+                                <a href="/ContratosAdquisiciones/contratosAdquisiciones">Contratos y Adquisiciones</a>
                             </li>
                         </ul>
                     </li>
@@ -109,10 +121,11 @@
                         <a href="#ConsejodeVigilanciaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Consejo de Vigilancia</a>
                         <ul class="collapse list-unstyled" id="ConsejodeVigilanciaSubmenu">
                             <li>
-                                <a href="http://173.212.229.137:82/ActaSesionesVigilancia/actaSesionesVigilancia">Actas de Sesiones</a>
+                                @* <a href="/ActaSesionesVigilancia/actaSesionesVigilancia">Actas de Sesiones</a> *@
+                                <a href="/ActaSesionesVigilancia/actaSesionesVigilancia">Actas de Sesiones</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/InformacionSocioVigilancia/informacionSocioVigilancia">Información al Socio</a>
+                                 <a href="/InformacionSocioVigilancia/informacionSocioVigilancia">Información al Socio</a> 
                             </li>
                         </ul>
                     </li>
@@ -122,10 +135,10 @@
                         <a href="#ComitéElectoralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comité Electoral</a>
                         <ul class="collapse list-unstyled" id="ComitéElectoralSubmenu">
                             <li>
-                                <a href="http://173.212.229.137:82/ProcesosElectorales/procesosElectorales">Procesos Electorales</a>
+                                <a href="/ProcesosElectorales/procesosElectorales">Procesos Electorales</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/InformacionSocioComiteElectoral/informacionSocioComiteElectoral">Información al Socio</a>
+                                <a href="/InformacionSocioComiteElectoral/informacionSocioComiteElectoral">Información al Socio</a>
                             </li>
                         </ul>
                     </li>
@@ -134,13 +147,13 @@
                         <a href="#ComitéEducCoopSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comité Educ. Coop.</a>
                         <ul class="collapse list-unstyled" id="ComitéEducCoopSubmenu">
                             <li>
-                                <a href="http://173.212.229.137:82/InformacionGeneral/informacionGeneral">Información General</a>
+                                <a href="/InformacionGeneral/informacionGeneral">Información General</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/Conversatorios/conversatorio">Conversatorios</a>
+                                <a href="/Conversatorios/conversatorio">Conversatorios</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/TalleresInduccion/talleresInduccion">Talleres de Inducción</a>
+                                <a href="/TalleresInduccion/talleresInduccion">Talleres de Inducción</a>
                             </li>
                         </ul>
                     </li>
@@ -149,10 +162,10 @@
                         <a href="#GerenciaGeneralSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gerencia General</a>
                         <ul class="collapse list-unstyled" id="GerenciaGeneralSubmenu">
                             <li>
-                                <a href="http://173.212.229.137:82/InformacionSocioGerencia/informacionSocioGerencia">Información al Socio</a>
+                                <a href="/InformacionSocioGerencia/informacionSocioGerencia">Información al Socio</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/DocumentoProceso/documentoProceso">Procesos</a>
+                                <a href="/DocumentoProceso/documentoProceso">Procesos</a>
                             </li>
                         </ul>
                     </li>
@@ -161,10 +174,10 @@
                         <a href="#ComitésSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Comités</a>
                         <ul class="collapse list-unstyled" id="ComitésSubmenu">
                             <li>
-                                <a href="http://173.212.229.137:82/Apoyo/apoyo">Apoyo</a>
+                                <a href="/Apoyo/apoyo">Apoyo</a>
                             </li>
                             <li>
-                                <a href="http://173.212.229.137:82/Especiales/especiales">Especiales</a>
+                                <a href="/Especiales/especiales">Especiales</a>
                             </li>
                         </ul>
                     </li>
@@ -184,7 +197,7 @@
                             </li>
                         </ul>
                     </li>
-                    
+                </ul> 
 
             </div>
         </nav>
@@ -195,7 +208,8 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    @* <button type="button" id="sidebarCollapse" class="btn btn-primary"> *@
+                    <button type="button" id="sidebarCollapse" class=" d-md-none btn btn-primary">
                         <i class="fa fa-bars"></i>
                         <span class="sr-only">Toggle Menu</span>
                     </button>
@@ -205,17 +219,17 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item">
+                           @*  <li class="nav-item">
                                 <a class="nav-link" href="/Login/login" id="salir" >Salir</a>
-                            </li>
+                            </li> *@
                             <li class="nav-item">
-                                <a class="nav-link" href="https://abrahamlincoln.edu.pe/language/en/home-2/" target="_blank">Colegio</a>
+                                <a class="nav-link" href="@Config["Redirecciones:Colegio"]" target="_blank">Colegio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Historia/historia">Historia</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://181.65.131.105/proveedoresal" target="_blank">Proveedores</a>
+                                <a class="nav-link" href="@Config["Redirecciones:Proveedores"]" target="_blank">Proveedores</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/NormasInternas/normasinternas">Normas Legales</a>
@@ -227,21 +241,21 @@
                     </div>
                 </div>
             </nav>
-
-            <p class="nombreusuario">
-                Bienvenido @nombreUsuario
-            </p>
+           
+            <p class="nombreusuario">Bienvenido @ViewBag.Nombre</p>
 
         </div>
         
     </div>
 
-    <footer class="footer">Este es un footer de ejemplo.</footer>
+    @* <script src="~/js/jquery.min.js"></script> *@
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
 
-    <script src="~/js/jquery.min.js"></script>
-    <script src="~/js/popper.js"></script>
-    <script src="~/js/bootstrap.min.js"></script>
-    <script src="~/js/main.js"></script>
+    <script src="/js/session-timeout.js"></script>
+
 </body>
 </html>
 

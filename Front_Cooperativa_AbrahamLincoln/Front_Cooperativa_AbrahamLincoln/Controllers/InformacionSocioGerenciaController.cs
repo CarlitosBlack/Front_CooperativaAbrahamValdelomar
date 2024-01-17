@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using Front_Cooperativa_AbrahamLincoln.Models;
+using System.Text;
 
 namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
@@ -14,6 +16,11 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
         }
         public async Task<IActionResult> InformacionSocioGerencia(int? id)
         {
+            var nombreUsuario = new Credenciales();
+            var sessionData = HttpContext.Session.Get("UserSession");
+            var serializedData = Encoding.UTF8.GetString(sessionData);
+            nombreUsuario = JsonConvert.DeserializeObject<Credenciales>(serializedData);
+            ViewBag.Nombre = nombreUsuario.NombreUsuario;
 
             List<ICategoria_Info_Socio_Gerencia> categoria = new List<ICategoria_Info_Socio_Gerencia>();
             List<IInfo_Socio_Gerencia> infoSocioGerencia = new List<IInfo_Socio_Gerencia>();

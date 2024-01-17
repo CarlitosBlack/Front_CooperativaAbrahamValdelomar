@@ -1,7 +1,9 @@
 ﻿using Front_Cooperativa_AbrahamLincoln.Entidades;
+using Front_Cooperativa_AbrahamLincoln.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
@@ -14,6 +16,11 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
         }
         public async Task<IActionResult> cooperativa()
         {
+            var nombreUsuario = new Credenciales();
+            var sessionData = HttpContext.Session.Get("UserSession");
+            var serializedData = Encoding.UTF8.GetString(sessionData);
+            nombreUsuario = JsonConvert.DeserializeObject<Credenciales>(serializedData);
+            ViewBag.Nombre = nombreUsuario.NombreUsuario;
 
             List<ICooperativa> cooperativa = new List<ICooperativa>();
             //string valorVariable = _configuration["URL_CONTROLLER"];

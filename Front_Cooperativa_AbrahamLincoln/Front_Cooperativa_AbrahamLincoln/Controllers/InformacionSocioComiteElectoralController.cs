@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using Front_Cooperativa_AbrahamLincoln.Models;
+using System.Text;
 
 namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
@@ -14,6 +16,12 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
         }
         public async Task<IActionResult> InformacionSocioComiteElectoral(int? id)
         {
+            var nombreUsuario = new Credenciales();
+            var sessionData = HttpContext.Session.Get("UserSession");
+            var serializedData = Encoding.UTF8.GetString(sessionData);
+            nombreUsuario = JsonConvert.DeserializeObject<Credenciales>(serializedData);
+            ViewBag.Nombre = nombreUsuario.NombreUsuario;
+
             List<ICategoriaComiteElectoral> categoria = new List<ICategoriaComiteElectoral>();
             List<IInfo_Socio_Comite_Electoral> infoSocioComiteElectoral = new List<IInfo_Socio_Comite_Electoral>();
             //string valorVariable = _configuration["URL_CONTROLLER"];

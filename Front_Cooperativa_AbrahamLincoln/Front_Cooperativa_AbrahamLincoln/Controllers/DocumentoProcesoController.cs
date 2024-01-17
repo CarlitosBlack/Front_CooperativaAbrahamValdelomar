@@ -1,7 +1,9 @@
 ﻿using Front_Cooperativa_AbrahamLincoln.Entidades;
+using Front_Cooperativa_AbrahamLincoln.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
@@ -14,6 +16,12 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
         }
         public async Task<IActionResult> DocumentoProceso(int? id)
         {
+            var nombreUsuario = new Credenciales();
+            var sessionData = HttpContext.Session.Get("UserSession");
+            var serializedData = Encoding.UTF8.GetString(sessionData);
+            nombreUsuario = JsonConvert.DeserializeObject<Credenciales>(serializedData);
+            ViewBag.Nombre = nombreUsuario.NombreUsuario;
+
             List<IDocumento_Proceso> documentos = new List<IDocumento_Proceso>();
             List<IProceso> procesos = new List<IProceso>();
             //string valorVariable = _configuration["URL_CONTROLLER"];

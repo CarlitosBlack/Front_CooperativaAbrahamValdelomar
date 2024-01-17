@@ -8280,9 +8280,29 @@ a[data-toggle="collapse"] {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-@media (max-width: 991.98px) {
+
+/*CAMBIOS BOTON SIDEBAR ACA 2/1/2024*/
+
+
+/*@media (max-width: 991.98px) {
   #sidebarCollapse span {
-    display: none; } }
+    display: none; } }*/
+#sidebarCollapse {
+    display: none;
+}
+
+@media (max-width: 991px) {
+
+    #sidebarCollapse {
+        display: flex;
+        display: block;
+    }
+
+        #sidebarCollapse span {
+            display: none;
+        }
+}
+/*ACA TERMINA EL CAMBIO 2/1/2024 */
 
 #content {
   width: 100%;
@@ -8301,6 +8321,14 @@ a[data-toggle="collapse"] {
 
 .footer p {
   color: rgba(255, 255, 255, 0.5); }
+
+/*ACA CAMBIO BODY 3/1/2024*/
+@media (max-width: 1024px) { /* Aproximadamente 20 pulgadas */
+    body {
+        zoom: 80%; /* Establece el zoom al 80% para pantallas menores a 16 pulgadas */
+    }
+}
+/*ACA TERMINA CAMBIO 3/11/2024*/
 
 
 /* Combo Box de Carga */
@@ -8449,7 +8477,8 @@ a[data-toggle="collapse"] {
         /*margin: 0 auto;*/ /* Centrar el contenido horizontalmente */
     /*}*/
 
-.footer {
+/*.footer {*/
+.general-footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -8462,6 +8491,11 @@ a[data-toggle="collapse"] {
     background-color: #D6D4D4;
     padding: 15px 0;
     z-index: 2;
+}
+
+.login-footer {
+    background-color: #164193; /* Cambia el color de fondo a azul */
+    color: white;
 }
 
 

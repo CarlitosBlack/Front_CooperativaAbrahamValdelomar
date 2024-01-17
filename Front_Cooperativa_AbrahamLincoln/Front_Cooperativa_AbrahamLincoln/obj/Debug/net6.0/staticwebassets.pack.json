@@ -73,36 +73,24 @@
       "PackagePath": "staticwebassets\\icono.ico"
     },
     {
-      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\4.jpg",
-      "PackagePath": "staticwebassets\\images\\4.jpg"
-    },
-    {
-      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\5.jpg",
-      "PackagePath": "staticwebassets\\images\\5.jpg"
-    },
-    {
-      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\6.jpg"
-    },
-    {
       "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\fondo.jpg",
       "PackagePath": "staticwebassets\\images\\fondo.jpg"
+    },
+    {
+      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\iconoexcel.png",
+      "PackagePath": "staticwebassets\\images\\iconoexcel.png"
     },
     {
       "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\iconopdf.png",
       "PackagePath": "staticwebassets\\images\\iconopdf.png"
     },
     {
-      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\imagenes_carrusel\\1.jpg",
-      "PackagePath": "staticwebassets\\images\\imagenes_carrusel\\1.jpg"
+      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\iconoword.png",
+      "PackagePath": "staticwebassets\\images\\iconoword.png"
     },
     {
-      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\imagenes_carrusel\\2.jpg",
-      "PackagePath": "staticwebassets\\images\\imagenes_carrusel\\2.jpg"
-    },
-    {
-      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\imagenes_carrusel\\3.jpg",
-      "PackagePath": "staticwebassets\\images\\imagenes_carrusel\\3.jpg"
+      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\iconozip.png",
+      "PackagePath": "staticwebassets\\images\\iconozip.png"
     },
     {
       "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\login.jpg",
@@ -113,16 +101,16 @@
       "PackagePath": "staticwebassets\\images\\login1.jpg"
     },
     {
-      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\logo.jpg",
-      "PackagePath": "staticwebassets\\images\\logo.jpg"
+      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\login2.jpg",
+      "PackagePath": "staticwebassets\\images\\login2.jpg"
+    },
+    {
+      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
     },
     {
       "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\logotipo.png",
       "PackagePath": "staticwebassets\\images\\logotipo.png"
-    },
-    {
-      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\normas.png",
-      "PackagePath": "staticwebassets\\images\\normas.png"
     },
     {
       "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\js\\bootstrap.js",
@@ -147,6 +135,10 @@
     {
       "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\js\\popper.js",
       "PackagePath": "staticwebassets\\js\\popper.js"
+    },
+    {
+      "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\js\\session-timeout.js",
+      "PackagePath": "staticwebassets\\js\\session-timeout.js"
     },
     {
       "Id": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\js\\site.js",

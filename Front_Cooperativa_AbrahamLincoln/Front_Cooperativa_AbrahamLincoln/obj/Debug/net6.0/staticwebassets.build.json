@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kvcdHVd3vZuasMDffS2XWXkmHRf7pI+nOLYch5Ip7+0=",
+  "Hash": "lOmoQ8jq2e5MgAQhAIfv7C+t2gzGK9Q+A0u3GDvh4NY=",
   "Source": "Front_Cooperativa_AbrahamLincoln",
   "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
   "Mode": "Default",
@@ -323,57 +323,6 @@
       "OriginalItemSpec": "wwwroot\\icono.ico"
     },
     {
-      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\4.jpg",
-      "SourceId": "Front_Cooperativa_AbrahamLincoln",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
-      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
-      "RelativePath": "images/4.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\4.jpg"
-    },
-    {
-      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\5.jpg",
-      "SourceId": "Front_Cooperativa_AbrahamLincoln",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
-      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
-      "RelativePath": "images/5.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\5.jpg"
-    },
-    {
-      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\6.jpg",
-      "SourceId": "Front_Cooperativa_AbrahamLincoln",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
-      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
-      "RelativePath": "images/6.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\6.jpg"
-    },
-    {
       "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\fondo.jpg",
       "SourceId": "Front_Cooperativa_AbrahamLincoln",
       "SourceType": "Discovered",
@@ -389,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\fondo.jpg"
+    },
+    {
+      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\iconoexcel.png",
+      "SourceId": "Front_Cooperativa_AbrahamLincoln",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
+      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
+      "RelativePath": "images/iconoexcel.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\iconoexcel.png"
     },
     {
       "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\iconopdf.png",
@@ -408,12 +374,12 @@
       "OriginalItemSpec": "wwwroot\\images\\iconopdf.png"
     },
     {
-      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\imagenes_carrusel\\1.jpg",
+      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\iconoword.png",
       "SourceId": "Front_Cooperativa_AbrahamLincoln",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
       "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
-      "RelativePath": "images/imagenes_carrusel/1.jpg",
+      "RelativePath": "images/iconoword.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -422,15 +388,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\imagenes_carrusel\\1.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\iconoword.png"
     },
     {
-      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\imagenes_carrusel\\2.jpg",
+      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\iconozip.png",
       "SourceId": "Front_Cooperativa_AbrahamLincoln",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
       "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
-      "RelativePath": "images/imagenes_carrusel/2.jpg",
+      "RelativePath": "images/iconozip.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -439,24 +405,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\imagenes_carrusel\\2.jpg"
-    },
-    {
-      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\imagenes_carrusel\\3.jpg",
-      "SourceId": "Front_Cooperativa_AbrahamLincoln",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
-      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
-      "RelativePath": "images/imagenes_carrusel/3.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\imagenes_carrusel\\3.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\iconozip.png"
     },
     {
       "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\login.jpg",
@@ -493,12 +442,12 @@
       "OriginalItemSpec": "wwwroot\\images\\login1.jpg"
     },
     {
-      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\logo.jpg",
+      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\login2.jpg",
       "SourceId": "Front_Cooperativa_AbrahamLincoln",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
       "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
-      "RelativePath": "images/logo.jpg",
+      "RelativePath": "images/login2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -507,7 +456,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\logo.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\login2.jpg"
+    },
+    {
+      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\logo.png",
+      "SourceId": "Front_Cooperativa_AbrahamLincoln",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
+      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
+      "RelativePath": "images/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
       "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\logotipo.png",
@@ -525,23 +491,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logotipo.png"
-    },
-    {
-      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\images\\normas.png",
-      "SourceId": "Front_Cooperativa_AbrahamLincoln",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
-      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
-      "RelativePath": "images/normas.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\normas.png"
     },
     {
       "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\js\\bootstrap.js",
@@ -644,6 +593,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\popper.js"
+    },
+    {
+      "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\js\\session-timeout.js",
+      "SourceId": "Front_Cooperativa_AbrahamLincoln",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\",
+      "BasePath": "_content/Front_Cooperativa_AbrahamLincoln",
+      "RelativePath": "js/session-timeout.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\session-timeout.js"
     },
     {
       "Identity": "D:\\AbrahamLincoln\\frontend\\front_aspnet\\Front_Cooperativa_AbrahamLincoln\\Front_Cooperativa_AbrahamLincoln\\wwwroot\\js\\site.js",

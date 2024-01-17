@@ -24,6 +24,10 @@ D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_C
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
@@ -50,6 +54,7 @@ D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_C
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\System.Composition.Runtime.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\System.Composition.TypedParts.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\System.Drawing.Common.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
 D:\AbrahamLincoln\frontend\front_aspnet\Front_Cooperativa_AbrahamLincoln\Front_Cooperativa_AbrahamLincoln\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll

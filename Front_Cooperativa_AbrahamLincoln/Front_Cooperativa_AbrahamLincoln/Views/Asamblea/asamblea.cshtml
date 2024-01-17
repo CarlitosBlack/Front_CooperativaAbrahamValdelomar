@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Front_Cooperativa_AbrahamLincoln.Entidades.IAsambleas>
 @{
     ViewData["Title"] = "Actas de Asamblea";
+    @inject IConfiguration Config
 }
 
 @* <!DOCTYPE html> *@
@@ -31,7 +32,7 @@
         <nav id="sidebar">
             <div class="p-4 pt-5">
                 @* <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a> *@
-                <img src="~/images/logo.jpg" class="img logo rounded-circle mb-4" />
+                <img src="/images/logo.png" class="img logo rounded-1 mb-4" />
                 <ul class="list-unstyled components mb-5">
                     <li class="active">
                         <a href="#OrganizaciónSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Organización</a>
@@ -182,7 +183,7 @@
                             </li>
                         </ul>
                     </li>
-
+                </ul>
 
             </div>
         </nav>
@@ -203,17 +204,17 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item">
+                            @* <li class="nav-item">
                                 <a class="nav-link" href="/Login/login" id="salir">Salir</a>
-                            </li>
+                            </li> *@
                             <li class="nav-item">
-                                <a class="nav-link" href="https://abrahamlincoln.edu.pe/language/en/home-2/" target="_blank">Colegio</a>
+                                <a class="nav-link" href="@Config["Redirecciones:Colegio"]" target="_blank">Colegio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/Historia/historia">Historia</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://181.65.131.105/proveedoresal" target="_blank">Proveedores</a>
+                                <a class="nav-link" href="@Config["Redirecciones:Proveedores"]" target="_blank">Proveedores</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/NormasInternas/normasinternas">Normas Legales</a>
@@ -225,21 +226,30 @@
                     </div>
                 </div>
             </nav>
-
+            <div style="text-align: left; font-size: 15px; font-family: Century Gothic; margin-right: 30px;">@ViewBag.Nombre</div>
             <div style="text-align: right; font-size: 30px; font-family: Century Gothic; margin-right: 30px;">Actas de Asamblea</div>
             <hr />
+
+            <form action="/Asamblea/asamblea">
+                <p>
+                    <select class="combobox-carga" name="id" asp-items="ViewBag.Asambleas">
+                        <option disabled selected style="display:none;">Seleccionar</option>
+                    </select>
+                    <input type="submit" class="boton-buscar" value="Buscar" />
+                </p>
+            </form>
 
             <section class="center-pdf">
                 <div class="redondeo-tabla">
                     <table class="table table-striped">
 
                         <th scope="col">NOMBRE</th>
-                        <th scope="col">CONVOVATORIA</th>
+                        <th scope="col">CONVOCATORIA</th>
                         <th scope="col">ACTAS</th>
                         <th scope="col">ANEXOS</th>
                         <th scope="col">ACUERDOS</th>
 
-                        @{var reversedModel = Model.Reverse();}
+                        @* @{var reversedModel = Model.Reverse();}
 
                         @foreach (var item in reversedModel)
                         {
@@ -261,8 +271,6 @@
                                             <p></p>
                                         }
                                     }
-                                    
-                                    @* @item._Convocatoria  *@
                                 </td>
                                 
                                 <td class="centrar-contenido">
@@ -319,6 +327,100 @@
 
                                 </td>
                             </tr>
+                        } *@
+
+
+                        @{
+                            var groupedModel = Model.GroupBy(x => x._Fecha).Reverse();
+                        }
+                        
+                        @foreach (var group in groupedModel)
+                        {
+                            string firstName = group.First()._Nombre;
+                                <tr>
+                                <td>@firstName @group.Key</td>
+
+                                    @* <td class="centrar-contenido"> *@
+                                    <td >
+                                    
+                                        @foreach (var item in group)
+                                        {
+                                            var archivoConvocatoria = item._Convocatoria;
+                                            if (archivoConvocatoria != null)
+                                            {
+                                                <a href="data:application/pdf;base64,@Convert.ToBase64String(archivoConvocatoria)" download="@item._Nombre @item._Fecha">
+                                                    <!-- Puedes utilizar un icono como una flecha hacia abajo o cualquier otro icono representativo -->
+                                                    <img src="~/images/iconopdf.png" alt="Icono PDF" width="30" height="30" style="vertical-align: middle;" />
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <p></p>
+                                            }
+                                        }
+                                        
+                                        
+                                    </td>
+
+                                    <td>
+                                        @{
+                                            foreach (var item in group)
+                                            {
+                                                var archivoActas = item._Actas;
+                                                if (archivoActas != null)
+                                                {
+                                                    <a href="data:application/pdf;base64,@Convert.ToBase64String(archivoActas)" download="@item._Nombre @item._Fecha">
+                                                        <!-- Puedes utilizar un icono como una flecha hacia abajo o cualquier otro icono representativo -->
+                                                        <img src="~/images/iconopdf.png" alt="Icono PDF" width="30" height="30" style="vertical-align: middle;" />
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <p></p>
+                                                }
+                                            }
+                                            
+                                        }
+
+                                    </td>
+
+                                    <td>
+                                    @foreach (var item in group)
+                                    {
+                                        var archivoAnexos = item._Anexos;
+                                        if (archivoAnexos != null)
+                                        {
+                                        <a href="data:application/pdf;base64,@Convert.ToBase64String(archivoAnexos)" download="@item._Nombre @item._Fecha">
+                                            <!-- Puedes utilizar un icono como una flecha hacia abajo o cualquier otro icono representativo -->
+                                            <img src="~/images/iconopdf.png" alt="Icono PDF" width="30" height="30" style="vertical-align: middle;" />
+                                        </a>
+                                        }
+                                        else
+                                        {
+                                        <p></p>
+                                        }
+                                    }
+                                    </td>
+
+                                    <td >
+                                    @foreach (var item in group)
+                                    {
+                                        var archivoAcuerdos = item._Acuerdos;
+                                        if (archivoAcuerdos != null)
+                                        {
+                                            <a href="data:application/pdf;base64,@Convert.ToBase64String(archivoAcuerdos)" download="@item._Nombre @item._Fecha">
+                                                <!-- Puedes utilizar un icono como una flecha hacia abajo o cualquier otro icono representativo -->
+                                                <img src="~/images/iconopdf.png" alt="Icono PDF" width="30" height="30" style="vertical-align: middle;" />
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <p></p>
+                                        }
+                                    }
+
+                                    </td>
+                                </tr>
                         }
 
                     </table>
@@ -332,6 +434,8 @@
     <script src="~/js/popper.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/main.js"></script>
+
+    <script src="/js/session-timeout.js"></script>
 </body>
 </html>
 

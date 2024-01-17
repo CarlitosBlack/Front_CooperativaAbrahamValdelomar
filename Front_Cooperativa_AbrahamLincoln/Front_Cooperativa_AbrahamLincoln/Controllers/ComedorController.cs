@@ -1,6 +1,8 @@
 ﻿using Front_Cooperativa_AbrahamLincoln.Entidades;
+using Front_Cooperativa_AbrahamLincoln.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
@@ -13,6 +15,12 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
         }
         public async Task<IActionResult> Comedor()
         {
+            var nombreUsuario = new Credenciales();
+            var sessionData = HttpContext.Session.Get("UserSession");
+            var serializedData = Encoding.UTF8.GetString(sessionData);
+            nombreUsuario = JsonConvert.DeserializeObject<Credenciales>(serializedData);
+            ViewBag.Nombre = nombreUsuario.NombreUsuario;
+
             List<IComedor> comedor = new List<IComedor>();
             //string valorVariable = _configuration["URL_CONTROLLER"];
             using (var listarComponentes = new HttpClient())

@@ -1,7 +1,9 @@
 ﻿using Front_Cooperativa_AbrahamLincoln.Entidades;
+using Front_Cooperativa_AbrahamLincoln.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace Front_Cooperativa_AbrahamLincoln.Controllers
 {
@@ -13,7 +15,13 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
             _configuration = configuration;
         }
 
-        public async Task<IActionResult> directivo(int? id) {
+        public async Task<IActionResult> directivo(int? id) 
+        {
+            var nombreUsuario = new Credenciales();
+            var sessionData = HttpContext.Session.Get("UserSession");
+            var serializedData = Encoding.UTF8.GetString(sessionData);
+            nombreUsuario = JsonConvert.DeserializeObject<Credenciales>(serializedData);
+            ViewBag.Nombre = nombreUsuario.NombreUsuario;
 
             List<IDirectivos> directivos = new List<IDirectivos>();
             List<ITipo_Equipo_Directivos> equipos = new List<ITipo_Equipo_Directivos>();
@@ -46,7 +54,8 @@ namespace Front_Cooperativa_AbrahamLincoln.Controllers
                 
             }
 
-            return View(directivos); }
+            return View(directivos); 
+        }
 
     }
 

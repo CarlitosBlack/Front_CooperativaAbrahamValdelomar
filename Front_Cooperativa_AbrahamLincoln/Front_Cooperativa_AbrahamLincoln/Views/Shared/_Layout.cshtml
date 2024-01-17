@@ -11,8 +11,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/css/style.css">
-    <link rel="icon" href="~/icono.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/icono.ico" type="image/x-icon">
 
 </head>
 <body>
@@ -46,10 +46,21 @@
         </main>
     </div>
 
+    @RenderBody()
+
+    @if (ViewBag.ShowFooter ?? true)
+    {
+        @* <footer class="footer">
+            Calle José Antonio - 475 La Molina / Tlf: (511) 617 4500
+        </footer> *@
+
+        <footer class="general-footer @((ViewBag.LoginFooter ?? false) ? "login-footer" : "")">
+            Calle José Antonio - 475 La Molina / Tlf: (511) 617 4500
+        </footer>
+    }
+
     @* <footer class="border-top footer text-muted"> *@
-    <footer class="footer">
-            &copy; 2023 - Calle José Antonio 475 - La Molina  /  www.abrahamlincoln.pe  / Teléfono:  617-4500 Fax:  617-4510 Apartado 108 Lima 100 Perú -
-    </footer>
+    
     @* <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
     @* <footer class="border-top footer text-muted">
         <div class="container">
@@ -60,9 +71,10 @@
 
 
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
